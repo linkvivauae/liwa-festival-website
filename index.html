@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liwa International Festival | The Desert's Grand Stage — 11 Dec 2026 to 3 Jan 2027</title>
+<meta name="description" content="Liwa International Festival returns to Al Dhafra, Abu Dhabi from 11 December 2026 to 3 January 2027. Nine Trail stops, one journey — motorsport, heritage, and desert nights.">
+<link rel="canonical" href="https://www.liwainternationalfestival.ae/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Liwa International Festival | The Desert's Grand Stage">
+<meta property="og:description" content="11 December 2026 – 3 January 2027. Nine Trail stops, one journey across Al Dhafra.">
+<meta property="og:image" content="assets/liwa-sign-planes.jpg">
+<meta property="og:url" content="https://www.liwainternationalfestival.ae/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Liwa International Festival — The Desert's Grand Stage">
+<meta name="twitter:description" content="11 December 2026 – 3 January 2027. Nine Trail stops, one journey across Al Dhafra.">
+<meta name="twitter:image" content="assets/liwa-sign-planes.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Liwa International Festival, home">
+      <img src="assets/logo-white.png" alt="Liwa International Festival" class="brand-logo">
+      <small class="brand-dates">11 Dec 2026 – 3 Jan 2027 · Al Dhafra, Abu Dhabi</small>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="programming.html" data-i18n="nav.programming">Programming</a>
+      <a href="plan-your-visit.html" data-i18n="nav.plan">Plan Your Visit</a>
+      <a href="the-trail.html" data-i18n="nav.experience">The Trail</a>
+      <a href="stay-and-dine.html" data-i18n="nav.stay">Stay &amp; Dine</a>
+      <a href="tickets.html" data-i18n="nav.tickets">Tickets</a>
+      <a href="feedback.html" data-i18n="nav.feedback">Feedback</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="btn-icon" id="site-search-open" aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label="Search the site">🔍</button>
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+      </div>
+      <a href="tickets.html" class="btn btn--primary btn--sm" data-i18n="cta.bookTickets">Book Tickets</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="bar"></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HERO — real Launch-film footage ============ -->
+  <section class="hero">
+    <div class="hero-media">
+      <video id="hero-video" autoplay muted loop playsinline poster="assets/hero-launch-poster.jpg" aria-hidden="true">
+        <source src="assets/hero-launch.mp4" type="video/mp4">
+      </video>
+      <img id="hero-fallback-img" src="assets/hero-launch-poster.jpg" alt="A man walks the Liwa dunes at dusk as the illuminated LIWA sign glows in the distance" hidden>
+    </div>
+    <div class="container hero-content">
+      <p class="eyebrow text-white" style="font-size:0.85rem;letter-spacing:0.16em">Liwa International Festival · 11 Dec 2026 – 3 Jan 2027</p>
+      <h1 data-i18n="hero.title">The Desert's Grand Stage</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Nine Trail stops. One journey across Al Dhafra — motorsport, heritage, and desert nights.</p>
+      <div class="hero-cta-row">
+        <a href="tickets.html" class="btn btn--primary" data-i18n="cta.bookTickets">Book Tickets</a>
+        <a href="the-trail.html" class="btn btn--secondary" data-i18n="cta.exploreProgramming">Walk the Trail</a>
+      </div>
+      <div id="countdown" class="countdown" aria-live="polite" aria-label="Countdown to festival opening"></div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span class="dot"></span>Scroll</div>
+  </section>
+
+  <!-- ============ 3D TERRAIN — the Trail's contour-line motif, rendered live ============ -->
+  <section class="terrain-section" aria-label="Animated three-dimensional dune terrain">
+    <canvas id="terrain-canvas" aria-hidden="true"></canvas>
+    <div class="terrain-fallback" aria-hidden="true"></div>
+    <div class="container terrain-caption">
+      <p class="eyebrow" style="color:var(--color-rutab)">Every Contour Has a Story</p>
+      <h2 class="text-white">The Trail, mapped in real time</h2>
+    </div>
+  </section>
+
+  <!-- ============ FESTIVAL AT A GLANCE — animated stat bar ============ -->
+  <div class="container">
+    <div class="stats-row reveal">
+      <div class="stat-item">
+        <div class="stat-number" data-target="24">0</div>
+        <div class="stat-label">Festival Days</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="9">0</div>
+        <div class="stat-label">Trail Stops</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Experience Zones</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="3">0</div>
+        <div class="stat-label">Ticket Types</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ EXPLORE THE TRAIL — interactive zone showcase ============ -->
+  <!-- Tab buttons double as the sitewide interest selector: #interest-selector
+       + [data-interest] is read by initInterestSelector() in script.js, so a
+       pick here also flags matching [data-interest-tags] cards on other pages. -->
+  <section class="section" id="zone-showcase">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <p class="eyebrow">Explore the Trail</p>
+        <h2>Five ways in — pick what pulls you</h2>
+        <p class="lede" style="margin-inline:auto">Your pick is remembered across the site, so matching stops get flagged "Picked for you" wherever you go next.</p>
+      </div>
+      <div class="tabs reveal" id="interest-selector" role="tablist" aria-label="Choose an experience zone" style="justify-content:center">
+        <button class="chip tab-btn" type="button" data-interest="motorsport" aria-controls="zone-panel-0" role="tab" aria-selected="true" aria-pressed="false">🏁 Motorsport</button>
+        <button class="chip tab-btn" type="button" data-interest="heritage" aria-controls="zone-panel-1" role="tab" aria-selected="false" aria-pressed="false">🦅 Heritage</button>
+        <button class="chip tab-btn" type="button" data-interest="family" aria-controls="zone-panel-2" role="tab" aria-selected="false" aria-pressed="false">🎡 Family</button>
+        <button class="chip tab-btn" type="button" data-interest="entertainment" aria-controls="zone-panel-3" role="tab" aria-selected="false" aria-pressed="false">🎶 Entertainment</button>
+        <button class="chip tab-btn" type="button" data-interest="adventure" aria-controls="zone-panel-4" role="tab" aria-selected="false" aria-pressed="false">🏜️ Desert</button>
+      </div>
+
+      <div class="tab-panel is-active" id="zone-panel-0">
+        <div class="zone-showcase reveal">
+          <div class="zone-media">
+            <img src="assets/monster-jam.jpg" alt="Monster truck crushing cars at the Tal Moreeb motorsport stage" loading="lazy">
+            <span class="zone-feature-pill" style="top:10%;left:8%">🏁 Freestyle Drift</span>
+            <span class="zone-feature-pill" style="bottom:10%;right:8%">🚙 Monster Jam</span>
+          </div>
+          <div>
+            <span class="zone-badge">Stop 1 · The Spectacle Peak</span>
+            <h3>Tal Moreeb</h3>
+            <p>The Trail's motorsport stage — the "Mountain of Screams" hosts the festival's loudest, fastest stops back to back.</p>
+            <div class="zone-features">
+              <span class="zone-feature">Freestyle Drift</span>
+              <span class="zone-feature">UTV Track</span>
+              <span class="zone-feature">Bike Drag Racing</span>
+              <span class="zone-feature">Monster Jam</span>
+            </div>
+            <a href="motorsport.html" class="btn btn--primary">Explore Motorsport →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="zone-panel-1">
+        <div class="zone-showcase reveal">
+          <div class="zone-media">
+            <img src="assets/five-forts-1.jpg" alt="Restored mudbrick watchtower and battlements of one of the Five Forts, flying the UAE flag" loading="lazy">
+            <span class="zone-feature-pill" style="top:10%;left:8%">🦅 Falconry</span>
+            <span class="zone-feature-pill" style="bottom:10%;right:8%">🐪 Camel Races</span>
+          </div>
+          <div>
+            <span class="zone-badge">Stop 6 · The Cultural Anchor</span>
+            <h3>Five Forts &amp; Traditional Sports</h3>
+            <p>Emirati heritage at its most hands-on — falconry displays, saluki racing, and craft workshops around the restored Five Forts.</p>
+            <div class="zone-features">
+              <span class="zone-feature">Falconry Displays</span>
+              <span class="zone-feature">Saluki Racing</span>
+              <span class="zone-feature">Camel Race Exhibitions</span>
+              <span class="zone-feature">Craft Workshops</span>
+            </div>
+            <a href="experience-liwa.html" class="btn btn--primary">Discover Heritage →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="zone-panel-2">
+        <div class="zone-showcase reveal">
+          <div class="zone-media">
+            <img src="assets/carnival-carousel.jpg" alt="A two-storey carousel lit up at dusk in the Wanasa carnival zone, branded for LIWA 2026" loading="lazy">
+            <span class="zone-feature-pill" style="top:10%;left:8%">🎠 Carnival Rides</span>
+            <span class="zone-feature-pill" style="bottom:10%;right:8%">🧵 Workshops</span>
+          </div>
+          <div>
+            <span class="zone-badge">Stop 9 · The Town Square</span>
+            <h3>Wanasa &amp; the Village</h3>
+            <p>A carnival wonderland built for joy — rides, creative workshops, and play zones inside Liwa Village for every age.</p>
+            <div class="zone-features">
+              <span class="zone-feature">Carnival Rides</span>
+              <span class="zone-feature">Creative Workshops</span>
+              <span class="zone-feature">Toddler Zone</span>
+              <span class="zone-feature">Community Fun Run</span>
+            </div>
+            <a href="programming.html?category=family" class="btn btn--primary">Plan the Family Day →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="zone-panel-3">
+        <div class="zone-showcase reveal">
+          <div class="zone-media">
+            <img src="assets/wanasa-fireworks.jpg" alt="Fireworks over the Wanasa entertainment gate at Liwa International Festival" loading="lazy">
+            <span class="zone-feature-pill" style="top:10%;left:8%">🎤 Headline Concerts</span>
+            <span class="zone-feature-pill" style="bottom:10%;right:8%">🎆 NYE Finale</span>
+          </div>
+          <div>
+            <span class="zone-badge">Stop 8 · The Time-Based Layer</span>
+            <h3>Live Programming</h3>
+            <p>Headline concerts, a nightly souq, and a New Year's Eve finale that lights up the entire Village.</p>
+            <div class="zone-features">
+              <span class="zone-feature">Headline Concerts</span>
+              <span class="zone-feature">Night Souq</span>
+              <span class="zone-feature">NYE Finale</span>
+              <span class="zone-feature">Fireworks</span>
+            </div>
+            <a href="programming.html?category=live-performances" class="btn btn--primary">View Live Programming →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="zone-panel-4">
+        <div class="zone-showcase reveal">
+          <div class="zone-media">
+            <img src="assets/dune-bash-night.jpg" alt="A modified 4x4 racing down a floodlit dune at night, kicking up sand" loading="lazy">
+            <span class="zone-feature-pill" style="top:10%;left:8%">🏜️ Dune Bashing</span>
+            <span class="zone-feature-pill" style="bottom:10%;right:8%">✨ Stargazing</span>
+          </div>
+          <div>
+            <span class="zone-badge">Stop 2 · The Connective Tissue</span>
+            <h3>The Open Desert</h3>
+            <p>Off the marked route and into the dunes — guided 4x4 experiences, sandboarding, and stargazing tours after dark.</p>
+            <div class="zone-features">
+              <span class="zone-feature">Dune Bashing</span>
+              <span class="zone-feature">Sandboarding</span>
+              <span class="zone-feature">Stargazing Tours</span>
+              <span class="zone-feature">Guided Add-ons</span>
+            </div>
+            <a href="the-trail.html" class="btn btn--primary">Explore the Desert →</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-lg)">
+        <a href="the-trail.html" class="btn btn--outline">See All Nine Trail Stops</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIWA IN MOTION — pinned scroll-scrubbed cinema (GSAP ScrollTrigger) ============ -->
+  <!-- Pins the section and scrubs 5 chapters to native scroll position, crossfading
+       full-bleed footage with a SplitText character reveal per chapter. Degrades to a
+       single static chapter (still fully readable) if the GSAP CDN fails or the
+       visitor has requested reduced motion — see initMotionCinema() below. -->
+  <section class="motion-cinema" id="motion-cinema" aria-label="Liwa International Festival in motion">
+    <div class="motion-cinema-pin">
+      <div class="motion-cinema-layer is-active" data-chapter="0">
+        <div class="motion-cinema-bg" style="background-image:url('assets/drift-flames-night.jpg')"></div>
+        <div class="motion-cinema-overlay"></div>
+        <div class="container motion-cinema-content">
+          <span class="motion-cinema-tag">Tal Moreeb</span>
+          <h3 class="motion-cinema-title">Freestyle drift, from above</h3>
+          <p class="motion-cinema-desc">Real footage from the Trail's motorsport stage — cars carving the dune floor beneath the Mountain of Screams.</p>
+          <a href="motorsport.html" class="btn btn--outline motion-cinema-cta">Book the Motorsport Experience →</a>
+        </div>
+      </div>
+      <div class="motion-cinema-layer" data-chapter="1">
+        <div class="motion-cinema-bg" style="background-image:url('assets/engine-start.jpg')"></div>
+        <div class="motion-cinema-overlay"></div>
+        <div class="container motion-cinema-content">
+          <span class="motion-cinema-tag">Engine Bay</span>
+          <h3 class="motion-cinema-title">Every stop starts with the start</h3>
+          <p class="motion-cinema-desc">Behind the grid before the run — the quiet second before the loudest stage on the Trail wakes up.</p>
+          <a href="programming.html?category=live-performances" class="btn btn--outline motion-cinema-cta">View Live Programming →</a>
+        </div>
+      </div>
+      <div class="motion-cinema-layer" data-chapter="2">
+        <div class="motion-cinema-bg" style="background-image:url('assets/dune-bashing-fleet.jpg')"></div>
+        <div class="motion-cinema-overlay"></div>
+        <div class="container motion-cinema-content">
+          <span class="motion-cinema-tag">The Open Desert</span>
+          <h3 class="motion-cinema-title">A fleet, and one open dune</h3>
+          <p class="motion-cinema-desc">Guided 4x4 convoys head out past the marked route once the sun drops — the Trail's most-booked add-on.</p>
+          <a href="the-trail.html" class="btn btn--outline motion-cinema-cta">Explore the Desert →</a>
+        </div>
+      </div>
+      <div class="motion-cinema-layer" data-chapter="3">
+        <div class="motion-cinema-bg" style="background-image:url('assets/craft-workshop.jpg')"></div>
+        <div class="motion-cinema-overlay"></div>
+        <div class="container motion-cinema-content">
+          <span class="motion-cinema-tag">Five Forts</span>
+          <h3 class="motion-cinema-title">Craft, kept alive by hand</h3>
+          <p class="motion-cinema-desc">Around the restored forts, artisans run live workshops in weaving, sadu, and traditional metalwork.</p>
+          <a href="experience-liwa.html" class="btn btn--outline motion-cinema-cta">Book a Workshop →</a>
+        </div>
+      </div>
+      <div class="motion-cinema-layer" data-chapter="4">
+        <div class="motion-cinema-bg" style="background-image:url('assets/night-market.jpg')"></div>
+        <div class="motion-cinema-overlay"></div>
+        <div class="container motion-cinema-content">
+          <span class="motion-cinema-tag">Liwa Village</span>
+          <h3 class="motion-cinema-title">Where the Trail ends every night</h3>
+          <p class="motion-cinema-desc">Nine stops lead back to one town square — food, the night souq, and the Village lit up until close.</p>
+          <a href="tickets.html" class="btn btn--outline motion-cinema-cta">Book Tickets →</a>
+        </div>
+      </div>
+      <div class="motion-cinema-dots" role="tablist" aria-label="Motion chapters">
+        <button class="motion-cinema-dot is-active" data-goto="0" role="tab" aria-label="Chapter 1 · Tal Moreeb"></button>
+        <button class="motion-cinema-dot" data-goto="1" role="tab" aria-label="Chapter 2 · Engine Bay"></button>
+        <button class="motion-cinema-dot" data-goto="2" role="tab" aria-label="Chapter 3 · The Open Desert"></button>
+        <button class="motion-cinema-dot" data-goto="3" role="tab" aria-label="Chapter 4 · Five Forts"></button>
+        <button class="motion-cinema-dot" data-goto="4" role="tab" aria-label="Chapter 5 · Liwa Village"></button>
+      </div>
+      <div class="motion-cinema-counter"><b data-chapter-current>01</b> / 05</div>
+      <div class="motion-cinema-progress"><span data-progress-fill></span></div>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICAL INFO — alternating panels ============ -->
+  <section class="section section--tight" style="background:var(--color-cream)">
+    <div class="container grid" style="grid-template-columns:1fr 1fr;gap:var(--space-lg);align-items:center">
+      <div class="reveal">
+        <p class="eyebrow">Find Your Way</p>
+        <h2>One map, every Trail stop</h2>
+        <p class="lede">Zones, stages, prayer rooms, first aid, parking, and all nine Trail stops in one interactive map — built for outdoor use on your phone.</p>
+        <a href="plan-your-visit.html#map" class="btn btn--outline">Open the Interactive Map</a>
+      </div>
+      <a href="plan-your-visit.html#map" class="reveal reveal-delay-1" style="display:block;border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow-card)">
+        <img src="assets/village-aerial-day.jpg" alt="Aerial daytime view of the octagonal Liwa Village grounds, the layout behind the interactive map" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover">
+      </a>
+    </div>
+  </section>
+
+  <section class="section section--heritage reveal">
+    <div class="contour-overlay"></div>
+    <div class="container grid" style="grid-template-columns:1fr 1fr;gap:var(--space-lg);align-items:center;position:relative;z-index:1">
+      <img src="assets/resort-pool-real.png" alt="Desert resort infinity pool and fort-style terraces at the accommodation site" loading="lazy" style="border-radius:var(--radius-card);aspect-ratio:4/3;object-fit:cover;order:1">
+      <div style="order:2">
+        <p class="eyebrow">Stop 3 · The Base Camp</p>
+        <h2>Plan your stay, then taste the desert</h2>
+        <p style="color:rgba(255,255,255,0.9)">Desert resorts, oasis hotels, and on-site camping — plus four ways to eat, from Bedouin classics to fine dining under the dunes.</p>
+        <a href="stay-and-dine.html" class="btn btn--dark">View Accommodation &amp; Dining →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLAN YOUR PERFECT LIWA DAY — quiz ============ -->
+  <section class="section" id="day-quiz-section">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <p class="eyebrow">Personalised For You</p>
+        <h2>Plan your perfect Liwa day</h2>
+        <p class="lede" style="margin-inline:auto">Two quick questions — we'll line up the three Trail stops that fit you best.</p>
+      </div>
+
+      <div class="day-quiz reveal" id="day-quiz">
+        <div class="day-quiz-progress">
+          <span class="is-active" data-quiz-progress="0"></span>
+          <span data-quiz-progress="1"></span>
+          <span data-quiz-progress="2"></span>
+        </div>
+
+        <div class="day-quiz-step is-active" data-quiz-step="0">
+          <h3>What's your festival personality?</h3>
+          <div class="day-quiz-grid">
+            <button class="day-quiz-choice" data-value="thrill"><span class="emoji">⚡</span>Thrill Seeker</button>
+            <button class="day-quiz-choice" data-value="culture"><span class="emoji">🏛️</span>Culture Lover</button>
+            <button class="day-quiz-choice" data-value="family"><span class="emoji">👨‍👩‍👧</span>Family Explorer</button>
+            <button class="day-quiz-choice" data-value="night"><span class="emoji">🌙</span>Night Owl</button>
+          </div>
+        </div>
+
+        <div class="day-quiz-step" data-quiz-step="1">
+          <h3>Who's coming with you?</h3>
+          <div class="day-quiz-grid">
+            <button class="day-quiz-choice" data-value="solo">Just Me</button>
+            <button class="day-quiz-choice" data-value="small">2–4 People</button>
+            <button class="day-quiz-choice" data-value="large">5+ People</button>
+            <button class="day-quiz-choice" data-value="kids">With Kids</button>
+          </div>
+        </div>
+
+        <div class="day-quiz-result" data-quiz-result>
+          <div class="section-header section-header--center" style="margin-bottom:0">
+            <p class="eyebrow">Your Liwa Day</p>
+            <h3 style="margin-bottom:0" data-quiz-result-title>The Desert Daredevil</h3>
+          </div>
+          <div class="day-quiz-result-list" data-quiz-result-list></div>
+          <div style="text-align:center">
+            <a href="tickets.html" class="btn btn--primary">Book These Experiences →</a>
+          </div>
+        </div>
+
+        <div class="day-quiz-nav" data-quiz-nav>
+          <button class="btn btn--outline" data-quiz-back disabled>← Back</button>
+          <button class="btn btn--outline" data-quiz-restart style="display:none">Start Over</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="container" style="max-width:820px">
+      <div class="section-header section-header--center reveal">
+        <p class="eyebrow">Good to Know</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="reveal">
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">Is there an entry fee for Liwa International Festival?</summary>
+          <p style="margin-top:0.75rem">Many Trail stops and stages are free to enter. Ticketed access applies to select motorsport, headline concerts, and workshops — see <a href="tickets.html">Tickets</a> for the full breakdown.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">What is the Liwa Trail?</summary>
+          <p style="margin-top:0.75rem">Nine physical stops across the festival grounds — from Tal Moreeb to the Five Forts to Liwa Village — each with its own booking action. See <a href="the-trail.html">The Trail</a> for the full route.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">Can I try dune activities as a visitor?</summary>
+          <p style="margin-top:0.75rem">Yes — dune bashing, sandboarding, and stargazing tours are available; see <a href="the-trail.html">The Trail</a> for details and how to add a guided tour add-on at checkout.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">Is the festival safe for families with young children?</summary>
+          <p style="margin-top:0.75rem">Yes. Family Day programming, shaded rest areas, medical points, and a dedicated toddler zone run throughout the festival.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">What should I bring?</summary>
+          <p style="margin-top:0.75rem">Sun protection, comfortable closed-toe shoes, a refillable water bottle, and a light jacket for cool desert evenings. See the full <a href="plan-your-visit.html">travel tips carousel</a>.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">Is camping available on-site?</summary>
+          <p style="margin-top:0.75rem">Yes — a Camping Pass add-on can be booked directly during checkout on the <a href="tickets.html">Tickets</a> page, alongside guided tours and merchandise bundles.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem;margin-bottom:0.75rem">
+          <summary style="cursor:pointer;font-weight:700">Is the site accessible in Arabic?</summary>
+          <p style="margin-top:0.75rem">Yes — use the EN/AR switch in the header to view the site right-to-left with Arabic navigation and headings.</p>
+        </details>
+        <details class="card" style="padding:1.25rem 1.5rem">
+          <summary style="cursor:pointer;font-weight:700">How do I get to Liwa from Abu Dhabi city?</summary>
+          <p style="margin-top:0.75rem">It's roughly a 2.5-hour drive via the E11 and E65. Full directions, parking, and taxi guidance are on the <a href="plan-your-visit.html">Plan Your Visit</a> page.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER CTA ============ -->
+  <section class="section section--gradient reveal">
+    <div class="contour-overlay"></div>
+    <div class="container" style="position:relative;z-index:1;max-width:640px;text-align:center">
+      <p class="eyebrow">Stay Updated</p>
+      <h2>Get programming drops and ticket alerts</h2>
+      <p style="color:rgba(255,255,255,0.85)">Join the mailing list for early access to headline event tickets and schedule updates.</p>
+      <form class="footer-newsletter-form newsletter-form" novalidate style="max-width:420px;margin-inline:auto">
+        <label class="visually-hidden" for="hero-newsletter-email">Email address</label>
+        <input type="email" id="hero-newsletter-email" placeholder="Email address" required>
+        <button class="btn btn--primary btn--sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-status" role="status" style="display:none;margin-top:0.75rem;color:var(--color-amber-gold);font-weight:700"></p>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:0.75rem">By subscribing you agree to our <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a>. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="contour-overlay"></div>
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand" aria-label="Liwa International Festival, home">
+        <img src="assets/logo-white.png" alt="Liwa International Festival" class="brand-logo">
+      </a>
+      <p style="margin-top:1rem;max-width:320px">The Desert's Grand Stage — 24 days across the Al Dhafra region of Abu Dhabi, 11 Dec 2026 to 3 Jan 2027.</p>
+      <div class="social-row">
+        <a href="https://instagram.com" aria-label="Liwa International Festival on Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="https://tiktok.com" aria-label="Liwa International Festival on TikTok" target="_blank" rel="noopener">TT</a>
+        <a href="https://youtube.com" aria-label="Liwa International Festival on YouTube" target="_blank" rel="noopener">YT</a>
+        <a href="https://x.com" aria-label="Liwa International Festival on X" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="the-trail.html">The Trail</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="plan-your-visit.html">Plan Your Visit</a></li>
+        <li><a href="stay-and-dine.html">Stay &amp; Dine</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visitor Info</h4>
+      <ul>
+        <li><a href="tickets.html">Tickets</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#accessibility">Accessibility Statement</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Stay in the Loop</h4>
+      <p>Get programming updates and ticket alerts.</p>
+      <form class="footer-newsletter-form newsletter-form" novalidate>
+        <label class="visually-hidden" for="footer-newsletter-email">Email address</label>
+        <input type="email" id="footer-newsletter-email" placeholder="Email address" required>
+        <button class="btn btn--primary btn--sm" type="submit">Join</button>
+      </form>
+      <p class="newsletter-status" role="status" style="display:none;margin-top:0.5rem;color:var(--color-amber-gold);font-size:0.85rem"></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 Liwa International Festival. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ITINERARY PANEL (shared) ============ -->
+<div class="panel-overlay" id="itinerary-overlay"></div>
+<aside class="side-panel" id="itinerary-panel" aria-hidden="true" aria-label="My Itinerary panel">
+  <div class="side-panel-header">
+    <h3 data-i18n="itinerary.title" style="margin:0">My Itinerary</h3>
+    <button class="btn-icon" id="itinerary-close" aria-label="Close itinerary panel">✕</button>
+  </div>
+  <div class="side-panel-body" id="itinerary-panel-body"></div>
+  <div class="side-panel-footer">
+    <a href="tickets.html" class="btn btn--primary btn--block">Proceed to Tickets</a>
+  </div>
+</aside>
+<button class="itinerary-fab" aria-haspopup="dialog" aria-controls="itinerary-panel">
+  <span>My Itinerary</span><span class="count-dot">0</span>
+</button>
+
+<!-- ============ LIGHTBOX MODAL (shared) ============ -->
+<div class="modal-overlay" id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image gallery viewer">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close gallery">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+</div>
+
+<!-- ============ SITEWIDE SEARCH (shared) ============ -->
+<div class="modal-overlay" id="site-search-overlay" role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="lightbox-content" style="max-width:640px">
+    <button class="lightbox-close" id="site-search-close" aria-label="Close search">✕</button>
+    <div style="background:var(--bg-surface);border-radius:var(--radius-card);padding:var(--space-md);max-height:80vh;overflow-y:auto">
+      <div class="search-box" style="margin-bottom:var(--space-sm)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <label class="visually-hidden" for="site-search-input">Search the site</label>
+        <input type="search" id="site-search-input" class="form-control" placeholder="Search events, Trail stops, pages…" autocomplete="off">
+      </div>
+      <div id="site-search-results"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+/* ---------- 3D DUNE-CONTOUR TERRAIN ----------
+   Renders the brand's flat topographic-line graphic device as a live,
+   navigable 3D surface: a shaded dune field (coloured Ahmar red → Ghubsha
+   dusk → black by height) with a white wireframe overlay tracing the same
+   contour lines the print Brand Guide uses on paper. Falls back to a
+   static CSS gradient if Three.js or WebGL is unavailable, or the visitor
+   has requested reduced motion.
+
+   Three.js (~600KB) is only fetched on desktop-width viewports — on
+   mobile we skip the request entirely rather than pay for a library the
+   visitor will never use. */
+(function initDuneTerrain() {
+  const section = document.querySelector('.terrain-section');
+  const canvas = document.getElementById('terrain-canvas');
+  if (!section || !canvas) return;
+
+  const showFallback = () => section.classList.add('is-fallback');
+  if (window.innerWidth < 760) { showFallback(); return; }
+
+  const threeScript = document.createElement('script');
+  threeScript.src = 'https://unpkg.com/three@0.160.0/build/three.min.js';
+  threeScript.onload = buildScene;
+  threeScript.onerror = showFallback;
+  document.body.appendChild(threeScript);
+
+  function buildScene() {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof THREE === 'undefined') { showFallback(); return; }
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+  } catch (e) { showFallback(); return; }
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x000000);
+  scene.fog = new THREE.FogExp2(0x000000, 0.028);
+
+  const camera = new THREE.PerspectiveCamera(45, section.clientWidth / section.clientHeight, 0.1, 200);
+  camera.position.set(0, 16, 26);
+  camera.lookAt(0, 0, 0);
+
+  // Terrain geometry — layered sine waves standing in for a dune heightmap,
+  // computed once (not per-frame) to keep this light on lower-end devices.
+  const SIZE = 60, SEG = 110;
+  const geometry = new THREE.PlaneGeometry(SIZE, SIZE, SEG, SEG);
+  geometry.rotateX(-Math.PI / 2);
+  const pos = geometry.attributes.position;
+  const colors = [];
+  const heightColor = (h) => {
+    // remap height (-3..4) to a red→dusk→black gradient, matching --gradient-sunset
+    const t = Math.max(0, Math.min(1, (h + 3) / 7));
+    const red = new THREE.Color(0xFF0000), ghubsha = new THREE.Color(0x6D1A42), black = new THREE.Color(0x000000);
+    return t < 0.5 ? red.clone().lerp(ghubsha, t / 0.5) : ghubsha.clone().lerp(black, (t - 0.5) / 0.5);
+  };
+  for (let i = 0; i < pos.count; i++) {
+    const x = pos.getX(i), z = pos.getZ(i);
+    const h = 2.2 * Math.sin(x * 0.15) * Math.cos(z * 0.12)
+            + 1.3 * Math.sin(x * 0.35 - z * 0.28)
+            + 0.5 * Math.sin(x * 0.9 + z * 0.7);
+    pos.setY(i, h);
+    const c = heightColor(h);
+    colors.push(c.r, c.g, c.b);
+  }
+  geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+  geometry.computeVertexNormals();
+
+  const surfaceMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, metalness: 0.05 });
+  const surface = new THREE.Mesh(geometry, surfaceMat);
+  scene.add(surface);
+
+  const wireMat = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: 0.12 });
+  const wireframe = new THREE.Mesh(geometry, wireMat);
+  wireframe.position.y = 0.02;
+  scene.add(wireframe);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  const key = new THREE.DirectionalLight(0xff5533, 1.1);
+  key.position.set(10, 18, 8);
+  scene.add(key);
+  const rim = new THREE.PointLight(0x6d1a42, 1.4, 60);
+  rim.position.set(-14, 6, -10);
+  scene.add(rim);
+
+  const group = new THREE.Group();
+  group.add(surface, wireframe);
+  scene.add(group);
+
+  function resize() {
+    const w = section.clientWidth, h = section.clientHeight;
+    renderer.setSize(w, h);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  let mouseX = 0;
+  section.addEventListener('mousemove', (e) => {
+    const rect = section.getBoundingClientRect();
+    mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+  });
+
+  // Render one frame immediately and synchronously — requestAnimationFrame
+  // never fires for a backgrounded tab (e.g. a middle-click "open in new
+  // tab"), so without this the canvas would stay blank until the visitor
+  // actually switches to it.
+  group.rotation.y = 0.4;
+  renderer.render(scene, camera);
+
+  if (reducedMotion) return;
+
+  let raf;
+  const clock = new THREE.Clock();
+  function animate() {
+    raf = requestAnimationFrame(animate);
+    // Self-healing resize: cheap check each frame so a late layout shift
+    // (web font swap, async content above pushing the viewport, etc.)
+    // can never leave the canvas buffer out of sync with its container.
+    if (canvas.width !== section.clientWidth || canvas.height !== section.clientHeight) resize();
+    const t = clock.getElapsedTime();
+    group.rotation.y = t * 0.05 + mouseX * 0.15;
+    camera.position.y = 16 + Math.sin(t * 0.15) * 1.2;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // Pause the render loop when off-screen to save battery/CPU.
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { if (!raf) animate(); }
+      else { cancelAnimationFrame(raf); raf = null; }
+    });
+  }, { threshold: 0.05 });
+  io.observe(section);
+  } // end buildScene
+})();
+</script>
+<script>
+/* ---------- PLAN YOUR PERFECT LIWA DAY — quiz ---------- */
+(function initDayQuiz() {
+  const root = document.getElementById('day-quiz');
+  if (!root) return;
+
+  const RECOMMENDATIONS = {
+    thrill: {
+      title: 'The Desert Daredevil',
+      stops: [
+        { tag: 'Tal Moreeb', label: 'Freestyle Drift &amp; Monster Jam', href: 'motorsport.html' },
+        { tag: 'The Open Desert', label: 'Guided Dune Bashing', href: 'the-trail.html' },
+        { tag: 'Liwa Village', label: 'Night Souq &amp; Fireworks', href: 'programming.html?category=live-performances' }
+      ]
+    },
+    culture: {
+      title: 'The Heritage Seeker',
+      stops: [
+        { tag: 'Five Forts', label: 'Falconry &amp; Saluki Racing', href: 'programming.html?category=traditional-sports' },
+        { tag: 'Five Forts', label: 'Craft Workshops', href: 'experience-liwa.html' },
+        { tag: 'The Open Desert', label: 'Stargazing Tour', href: 'the-trail.html' }
+      ]
+    },
+    family: {
+      title: 'The Family Explorer',
+      stops: [
+        { tag: 'Liwa Village', label: 'Wanasa Carnival &amp; Rides', href: 'programming.html?category=family' },
+        { tag: 'Liwa Village', label: 'Family Workshops', href: 'programming.html?category=family' },
+        { tag: 'Base Camp', label: 'Village Dining', href: 'stay-and-dine.html' }
+      ]
+    },
+    night: {
+      title: 'The Night Owl',
+      stops: [
+        { tag: 'Liwa Village', label: 'Night Souq', href: 'programming.html?category=live-performances' },
+        { tag: 'Liwa Village', label: 'Headline Concert', href: 'programming.html?category=live-performances' },
+        { tag: 'The Trail', label: 'Fireworks Finale', href: 'the-trail.html' }
+      ]
+    }
+  };
+  const GROUP_NOTE = {
+    solo: 'Built for a solo visit.',
+    small: 'Built for a group of 2–4.',
+    large: 'Built for a group of 5+.',
+    kids: 'Built with kids in mind.'
+  };
+
+  const steps = root.querySelectorAll('.day-quiz-step');
+  const progressDots = root.querySelectorAll('[data-quiz-progress]');
+  const resultPanel = root.querySelector('[data-quiz-result]');
+  const resultTitle = root.querySelector('[data-quiz-result-title]');
+  const resultList = root.querySelector('[data-quiz-result-list]');
+  const backBtn = root.querySelector('[data-quiz-back]');
+  const restartBtn = root.querySelector('[data-quiz-restart]');
+
+  let stepIndex = 0;
+  const answers = {};
+
+  function showStep(i) {
+    stepIndex = i;
+    steps.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
+    resultPanel.classList.remove('is-active');
+    progressDots.forEach((dot, idx) => {
+      dot.classList.toggle('is-active', idx === i);
+      dot.classList.toggle('is-done', idx < i);
+    });
+    backBtn.disabled = i === 0;
+    backBtn.style.display = '';
+    restartBtn.style.display = 'none';
+  }
+
+  function showResult() {
+    const rec = RECOMMENDATIONS[answers.personality] || RECOMMENDATIONS.thrill;
+    resultTitle.textContent = rec.title;
+    resultList.innerHTML = rec.stops.map((s) =>
+      `<div class="day-quiz-result-item"><span>${s.label}</span><a href="${s.href}" class="btn btn--outline btn--sm">${s.tag} →</a></div>`
+    ).join('') + (GROUP_NOTE[answers.group] ? `<p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:0.25rem">${GROUP_NOTE[answers.group]}</p>` : '');
+    steps.forEach((s) => s.classList.remove('is-active'));
+    progressDots.forEach((dot) => dot.classList.add('is-done'));
+    resultPanel.classList.add('is-active');
+    backBtn.style.display = 'none';
+    restartBtn.style.display = '';
+  }
+
+  steps.forEach((step, idx) => {
+    step.querySelectorAll('.day-quiz-choice').forEach((choice) => {
+      choice.addEventListener('click', () => {
+        step.querySelectorAll('.day-quiz-choice').forEach((c) => c.classList.remove('is-selected'));
+        choice.classList.add('is-selected');
+        answers[idx === 0 ? 'personality' : 'group'] = choice.dataset.value;
+        setTimeout(() => {
+          if (idx < steps.length - 1) showStep(idx + 1); else showResult();
+        }, 200);
+      });
+    });
+  });
+
+  backBtn.addEventListener('click', () => { if (stepIndex > 0) showStep(stepIndex - 1); });
+  restartBtn.addEventListener('click', () => {
+    root.querySelectorAll('.day-quiz-choice.is-selected').forEach((c) => c.classList.remove('is-selected'));
+    showStep(0);
+  });
+})();
+</script>
+<script>
+/* ---------- PREMIUM MOTION LAYER — GSAP + ScrollTrigger + SplitText ----------
+   All three are free (Webflow acquired GreenSock in 2024 and unlocked every
+   bonus plugin in 2025), loaded from cdnjs only on this page. Powers three
+   things: the pinned/scrubbed "Liwa in Motion" cinema, a magnetic-cursor
+   effect on primary CTAs, and a staggered word reveal on section headings.
+   Skips entirely under reduced motion — the CSS-only fallback in each
+   section (first chapter visible, headings statically in place) still
+   reads fine without JS. */
+(function initPremiumMotion() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const CDN = 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/';
+  const files = ['gsap.min.js', 'ScrollTrigger.min.js', 'SplitText.min.js', 'ScrollToPlugin.min.js'];
+  let loaded = 0;
+  files.forEach((file) => {
+    const s = document.createElement('script');
+    s.src = CDN + file;
+    s.onload = () => { loaded++; if (loaded === files.length) boot(); };
+    s.onerror = () => {}; // fail silent — every section already has a static CSS fallback
+    document.body.appendChild(s);
+  });
+
+  function boot() {
+    if (typeof gsap === 'undefined' || !window.ScrollTrigger || !window.SplitText) return;
+    gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
+    initMotionCinema();
+    initMagneticButtons();
+    initHeadingReveals();
+  }
+
+  function initMotionCinema() {
+    const cinema = document.getElementById('motion-cinema');
+    if (!cinema) return;
+    const layers = gsap.utils.toArray('.motion-cinema-layer');
+    const dots = gsap.utils.toArray('.motion-cinema-dot');
+    const progressFill = cinema.querySelector('[data-progress-fill]');
+    const counterEl = cinema.querySelector('[data-chapter-current]');
+    const splits = layers.map((layer) => new SplitText(layer.querySelector('.motion-cinema-title'), { type: 'chars' }));
+
+    gsap.set(layers, { opacity: (i) => (i === 0 ? 1 : 0) });
+    splits.forEach((split, i) => gsap.set(split.chars, { yPercent: i === 0 ? 0 : 120, opacity: i === 0 ? 1 : 0 }));
+    layers.forEach((layer, i) => { layer.dataset.active = String(i === 0); });
+
+    const st = ScrollTrigger.create({
+      trigger: cinema,
+      start: 'top top',
+      end: () => '+=' + (layers.length * 900),
+      pin: '.motion-cinema-pin',
+      scrub: 0.6,
+      anticipatePin: 1,
+      onUpdate(self) {
+        const idx = Math.min(layers.length - 1, Math.floor(self.progress * layers.length));
+        progressFill.style.width = (self.progress * 100) + '%';
+        counterEl.textContent = String(idx + 1).padStart(2, '0');
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+        layers.forEach((layer, i) => {
+          const active = i === idx;
+          if (layer.dataset.active === String(active)) return;
+          layer.dataset.active = String(active);
+          gsap.to(layer, { opacity: active ? 1 : 0, duration: 0.6, overwrite: 'auto' });
+          gsap.to(splits[i].chars, { yPercent: active ? 0 : 120, opacity: active ? 1 : 0, stagger: active ? 0.015 : 0, duration: 0.5, overwrite: 'auto' });
+        });
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        const target = st.start + (st.end - st.start) * (i / (layers.length - 1)) + 2;
+        gsap.to(window, { scrollTo: target, duration: 1, ease: 'power2.inOut' });
+      });
+    });
+  }
+
+  function initMagneticButtons() {
+    if (window.innerWidth < 900 || !('matchMedia' in window) || matchMedia('(pointer: coarse)').matches) return;
+    const magnets = document.querySelectorAll('.hero-cta-row .btn, .zone-showcase .btn--primary, .motion-cinema-cta, #day-quiz .btn--primary');
+    magnets.forEach((btn) => {
+      const xTo = gsap.quickTo(btn, 'x', { duration: 0.3, ease: 'power2.out' });
+      const yTo = gsap.quickTo(btn, 'y', { duration: 0.3, ease: 'power2.out' });
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        xTo((e.clientX - r.left - r.width / 2) * 0.3);
+        yTo((e.clientY - r.top - r.height / 2) * 0.4);
+      });
+      btn.addEventListener('mouseleave', () => {
+        gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
+      });
+    });
+  }
+
+  function initHeadingReveals() {
+    document.querySelectorAll('main h2').forEach((h2) => {
+      const split = new SplitText(h2, { type: 'words' });
+      gsap.set(split.words, { yPercent: 100, opacity: 0 });
+      ScrollTrigger.create({
+        trigger: h2,
+        start: 'top 88%',
+        once: true,
+        onEnter: () => gsap.to(split.words, { yPercent: 0, opacity: 1, stagger: 0.05, duration: 0.7, ease: 'power3.out' })
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

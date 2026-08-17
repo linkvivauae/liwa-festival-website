@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="event-page-title">Event Details | Liwa International Festival</title>
+<meta name="description" content="Full event details, gallery, schedule, and ticket options for a Liwa International Festival programming entry.">
+<link rel="canonical" href="https://www.liwainternationalfestival.ae/event-detail.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Event Details | Liwa International Festival">
+<meta property="og:description" content="Full event details, gallery, schedule, and ticket options.">
+<meta property="og:image" content="assets/fireworks-liwa-dune.jpg">
+<meta property="og:url" content="https://www.liwainternationalfestival.ae/event-detail.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Event Details | Liwa International Festival">
+<meta name="twitter:image" content="assets/fireworks-liwa-dune.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#event-detail-root">Skip to main content</a>
+
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Liwa International Festival, home">
+      <img src="assets/logo-white.png" alt="Liwa International Festival" class="brand-logo">
+      <small class="brand-dates">11 Dec 2026 – 3 Jan 2027 · Al Dhafra, Abu Dhabi</small>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="programming.html" data-i18n="nav.programming">Programming</a>
+      <a href="plan-your-visit.html" data-i18n="nav.plan">Plan Your Visit</a>
+      <a href="the-trail.html" data-i18n="nav.experience">The Trail</a>
+      <a href="stay-and-dine.html" data-i18n="nav.stay">Stay &amp; Dine</a>
+      <a href="tickets.html" data-i18n="nav.tickets">Tickets</a>
+      <a href="feedback.html" data-i18n="nav.feedback">Feedback</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="btn-icon" id="site-search-open" aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label="Search the site">🔍</button>
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+      </div>
+      <a href="tickets.html" class="btn btn--primary btn--sm" data-i18n="cta.bookTickets">Book Tickets</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="bar"></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="event-detail-root">
+
+  <section class="page-hero" style="min-height:44vh">
+    <img id="event-hero-img" src="assets/fireworks-liwa-dune.jpg" alt="">
+    <div class="contour-overlay"></div>
+    <div class="container page-hero-content">
+      <p class="breadcrumb"><a href="index.html">Home</a> / <a href="programming.html">Programming</a> / <span id="event-title-crumb">Event</span></p>
+    </div>
+  </section>
+
+  <section class="section--tight section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:2fr 1fr;gap:var(--space-lg);align-items:flex-start">
+        <div>
+          <h1 id="event-title" class="reveal">Event Title</h1>
+          <div class="card-meta reveal" style="font-size:0.95rem;margin-bottom:var(--space-md)">
+            <span>📅 <span id="event-date"></span></span>
+            <span>🕒 <span id="event-time"></span></span>
+            <span>📍 <span id="event-location"></span></span>
+          </div>
+          <div id="event-tags" class="card-meta reveal" style="margin-bottom:var(--space-md)"></div>
+          <p id="event-description" class="lede reveal" style="max-width:none"></p>
+
+          <h2 class="reveal" style="margin-top:var(--space-lg)">Gallery</h2>
+          <div id="event-gallery" class="grid grid--3 reveal"></div>
+
+          <h2 class="reveal" style="margin-top:var(--space-lg)">More Like This</h2>
+          <div id="event-related" class="grid grid--3 reveal"></div>
+        </div>
+
+        <aside class="order-summary reveal" aria-label="Ticket and itinerary actions">
+          <h3>Join This Event</h3>
+          <div class="form-group">
+            <label for="event-ticket-select">Ticket type</label>
+            <select id="event-ticket-select" class="form-control" aria-label="Select a ticket type for this event"></select>
+          </div>
+          <a href="tickets.html" id="event-buy-btn" class="btn btn--primary btn--block" style="margin-bottom:0.6rem">Buy Tickets</a>
+          <button id="event-add-itinerary" class="btn btn--outline btn--block" type="button">+ Add to Itinerary</button>
+          <p class="hint" style="margin-top:0.75rem">Saved to your device only — sync with a real account is on our roadmap.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="contour-overlay"></div>
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand" aria-label="Liwa International Festival, home">
+        <img src="assets/logo-white.png" alt="Liwa International Festival" class="brand-logo">
+      </a>
+      <p style="margin-top:1rem;max-width:320px">24 days of motorsport, heritage sport, live performance and desert culinary nights across the Al Dhafra region of Abu Dhabi.</p>
+      <div class="social-row">
+        <a href="https://instagram.com" aria-label="Liwa International Festival on Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="https://tiktok.com" aria-label="Liwa International Festival on TikTok" target="_blank" rel="noopener">TT</a>
+        <a href="https://youtube.com" aria-label="Liwa International Festival on YouTube" target="_blank" rel="noopener">YT</a>
+        <a href="https://x.com" aria-label="Liwa International Festival on X" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="plan-your-visit.html">Plan Your Visit</a></li>
+        <li><a href="experience-liwa.html">Experience Liwa</a></li>
+        <li><a href="stay-and-dine.html">Stay &amp; Dine</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visitor Info</h4>
+      <ul>
+        <li><a href="tickets.html">Tickets</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#accessibility">Accessibility Statement</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Stay in the Loop</h4>
+      <p>Get programming updates and ticket alerts.</p>
+      <form class="footer-newsletter-form newsletter-form" novalidate>
+        <label class="visually-hidden" for="footer-newsletter-email">Email address</label>
+        <input type="email" id="footer-newsletter-email" placeholder="Email address" required>
+        <button class="btn btn--primary btn--sm" type="submit">Join</button>
+      </form>
+      <p class="newsletter-status" role="status" style="display:none;margin-top:0.5rem;color:var(--color-amber-gold);font-size:0.85rem"></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 Liwa International Festival. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<div class="panel-overlay" id="itinerary-overlay"></div>
+<aside class="side-panel" id="itinerary-panel" aria-hidden="true" aria-label="My Itinerary panel">
+  <div class="side-panel-header">
+    <h3 data-i18n="itinerary.title" style="margin:0">My Itinerary</h3>
+    <button class="btn-icon" id="itinerary-close" aria-label="Close itinerary panel">✕</button>
+  </div>
+  <div class="side-panel-body" id="itinerary-panel-body"></div>
+  <div class="side-panel-footer">
+    <a href="tickets.html" class="btn btn--primary btn--block">Proceed to Tickets</a>
+  </div>
+</aside>
+<button class="itinerary-fab" aria-haspopup="dialog" aria-controls="itinerary-panel">
+  <span>My Itinerary</span><span class="count-dot">0</span>
+</button>
+
+<div class="modal-overlay" id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image gallery viewer">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close gallery">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+</div>
+
+<!-- ============ SITEWIDE SEARCH (shared) ============ -->
+<div class="modal-overlay" id="site-search-overlay" role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="lightbox-content" style="max-width:640px">
+    <button class="lightbox-close" id="site-search-close" aria-label="Close search">✕</button>
+    <div style="background:var(--bg-surface);border-radius:var(--radius-card);padding:var(--space-md);max-height:80vh;overflow-y:auto">
+      <div class="search-box" style="margin-bottom:var(--space-sm)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <label class="visually-hidden" for="site-search-input">Search the site</label>
+        <input type="search" id="site-search-input" class="form-control" placeholder="Search events, Trail stops, pages…" autocomplete="off">
+      </div>
+      <div id="site-search-results"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Keep the breadcrumb's event name and <title> in sync once script.js resolves the event
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const titleText = document.getElementById('event-title')?.textContent;
+      if (titleText && titleText !== 'Event Title') {
+        document.getElementById('event-title-crumb').textContent = titleText;
+        document.getElementById('event-page-title').textContent = titleText + ' | Liwa International Festival';
+      }
+    }, 0);
+  });
+</script>
+</body>
+</html>

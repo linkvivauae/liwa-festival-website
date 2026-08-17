@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (not used by this project, guarded for future tooling)
+node_modules/
+
+# Environment / secrets — never commit real credentials
+.env
+.env.*
+!.env.example
+
+# Local build output
+dist/
+build/
+.cache/
+
+# Archives
+*.zip
+*.tar
+*.tgz
