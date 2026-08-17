@@ -36,14 +36,14 @@ const EVENTS = [
     price: 0,
     free: true,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/village-orbit-night-hd.jpg',
     ticketTypeId: 'day-pass',
     summary: 'The festival\'s opening night — live music, a lantern parade, and the ceremonial lighting of the Liwa Village gateway.',
     description: 'Join thousands of visitors as Liwa Village opens its gates for the 2026/27 season. The evening features a headline live-music set, a traditional Bedouin welcome ceremony, a lantern-lit procession through the market lanes, and a fireworks-style drone show over the dunes. Arrive early to enjoy the food court before the main stage program begins at 7pm.',
     gallery: [
-      'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1200&auto=format&fit=crop'
+      'assets/village-aerial-night.jpg',
+      'assets/wanasa-fireworks.jpg',
+      'assets/wanasa-fireworks.jpg'
     ]
   },
   {
@@ -57,13 +57,13 @@ const EVENTS = [
     price: 95,
     free: false,
     status: 'limited',
-    image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/dirt-bike-night.jpg',
     ticketTypeId: 'day-pass',
     summary: 'Regional riders tear through the dunes in the festival\'s flagship motorsport fixture.',
     description: 'Watch top regional motocross riders compete across qualifying heats and a final showdown on a purpose-built dune circuit. Trackside grandstand seating, a pit-lane walkthrough, and a kids\' mini-bike zone run throughout the day. Limited grandstand capacity — early booking recommended.',
     gallery: [
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1200&auto=format&fit=crop'
+      'assets/utv-airborne-night.jpg',
+      'assets/utv-airborne-night.jpg'
     ]
   },
   {
@@ -77,13 +77,13 @@ const EVENTS = [
     price: 0,
     free: true,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/falconer-release.jpg',
     ticketTypeId: 'day-pass',
     summary: 'Falconry demonstrations, saluki racing, and a traditional tug-of-war tournament.',
     description: 'A showcase of Emirati heritage sport: master falconers demonstrate flight and hunting techniques, followed by saluki (Arabian hound) racing exhibitions and an audience-participation tug-of-war tournament. Interpreters provide English/Arabic commentary throughout.',
     gallery: [
-      'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504173010664-32509aeebb62?q=80&w=1200&auto=format&fit=crop'
+      'assets/falcon-low-flight.jpg',
+      'assets/falcon-low-flight.jpg'
     ]
   },
   {
@@ -97,13 +97,13 @@ const EVENTS = [
     price: 40,
     free: false,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/carnival-carousel.jpg',
     ticketTypeId: 'day-pass',
     summary: 'A full day of rides, face painting, workshops, and desert-themed play areas for all ages.',
     description: 'The festival\'s biggest family-focused day: a full amusement-ride midway, craft workshops for children, a petting corner, and a dedicated toddler play dune. Face painting and a scavenger hunt run throughout the day, culminating in an early-evening family concert.',
     gallery: [
-      'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop'
+      'assets/family-run.jpg',
+      'assets/family-run.jpg'
     ]
   },
   {
@@ -117,13 +117,13 @@ const EVENTS = [
     price: 0,
     free: true,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/night-market.jpg',
     ticketTypeId: 'day-pass',
     summary: 'A curated night market of Emirati and regional street food, live cooking demos, and dessert stalls.',
     description: 'Wander a lantern-lit night souq featuring over 30 food vendors spanning Emirati, Levantine, and South Asian cuisine. Rotating live cooking demonstrations from regional chefs run every hour, alongside a dedicated dessert and coffee corner inspired by the Home page\'s "Where to Eat" categories.',
     gallery: [
-      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200&auto=format&fit=crop'
+      'assets/burro-blanco-dine.jpg',
+      'assets/burro-blanco-dine.jpg'
     ]
   },
   {
@@ -137,12 +137,12 @@ const EVENTS = [
     price: 60,
     free: false,
     status: 'soldout',
-    image: 'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/dune-track-day.jpg',
     ticketTypeId: 'weekend-pass',
     summary: 'Competitive sandboarding down the legendary Tal Moreeb, open to amateur and pro categories.',
     description: 'Riders descend the towering Tal Moreeb in timed sandboarding runs across amateur and professional categories. Spectator viewing areas line the base of the dune with large screens for slow-motion replays. This event has sold out — join the waitlist via the feedback page.',
     gallery: [
-      'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?q=80&w=1200&auto=format&fit=crop'
+      'assets/dune-vista-flag.jpg'
     ]
   },
   {
@@ -156,13 +156,13 @@ const EVENTS = [
     price: 0,
     free: true,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/craft-workshop.jpg',
     ticketTypeId: 'day-pass',
     summary: 'Local artisans, calligraphy workshops, and a live mural painting installation.',
     description: 'A market of regional artisans selling handwoven textiles, pottery, and Bedouin silverwork, paired with drop-in Arabic calligraphy workshops and a large-scale live mural painted over the course of the festival by a rotating cast of local artists.',
     gallery: [
-      'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=1200&auto=format&fit=crop'
+      'assets/ayala-stick-dance.jpg',
+      'assets/ayala-stick-dance.jpg'
     ]
   },
   {
@@ -176,13 +176,13 @@ const EVENTS = [
     price: 250,
     free: false,
     status: 'limited',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/fireworks-liwa-dune.jpg',
     ticketTypeId: 'vip-package',
     summary: 'Ring in the new year under the stars with a headline artist performance and countdown fireworks.',
     description: 'The festival\'s marquee evening: a top-billed regional artist performance, a midnight countdown synced with a fireworks display over the dunes, and an after-party set continuing into the early hours. VIP Package holders receive access to an elevated viewing deck and dedicated bar service.',
     gallery: [
-      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop'
+      'assets/wanasa-fireworks.jpg',
+      'assets/wanasa-fireworks.jpg'
     ]
   },
   {
@@ -196,12 +196,12 @@ const EVENTS = [
     price: 30,
     free: false,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/dunes-challenge-activation.jpg',
     ticketTypeId: 'day-pass',
     summary: 'Hands-on mini dune-buggy building and racing workshop for ages 6–12.',
     description: 'A supervised, hands-on workshop where children assemble battery-powered mini dune buggies from kits, then race them on a scaled-down closing-day track. All materials and safety gear provided; capacity limited to 40 children per session.',
     gallery: [
-      'https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?q=80&w=1200&auto=format&fit=crop'
+      'assets/family-run.jpg'
     ]
   },
   {
@@ -215,12 +215,12 @@ const EVENTS = [
     price: 0,
     free: true,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/wanasa-fireworks.jpg',
     ticketTypeId: 'day-pass',
     summary: 'The 2026/27 season closes with a full-scale fireworks and light show over Tal Moreeb.',
     description: 'The festival\'s final evening brings the season to a close with a farewell market, closing performances from resident artists, and a 20-minute fireworks and light-projection finale over Tal Moreeb.',
     gallery: [
-      'https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?q=80&w=1200&auto=format&fit=crop'
+      'assets/fireworks-liwa-dune.jpg'
     ]
   },
   {
@@ -234,12 +234,12 @@ const EVENTS = [
     price: 75,
     free: false,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/burro-blanco-dine.jpg',
     ticketTypeId: 'day-pass',
     summary: 'A guided, hands-on class in traditional Emirati dishes led by a local chef.',
     description: 'Learn to prepare a traditional Emirati dish — from majboos to luqaimat — in this small-group, hands-on class led by a Al Dhafra-based chef. Includes all ingredients, a recipe booklet, and a tasting of the finished dishes.',
     gallery: [
-      'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop'
+      'assets/night-market.jpg'
     ]
   },
   {
@@ -253,12 +253,12 @@ const EVENTS = [
     price: 0,
     free: true,
     status: 'upcoming',
-    image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1200&auto=format&fit=crop',
+    image: 'assets/camel-caravan.jpg',
     ticketTypeId: 'day-pass',
     summary: 'An early-morning exhibition race showcasing the region\'s camel-racing heritage.',
     description: 'A morning exhibition of traditional camel racing on the Al Dhafra track, run in partnership with local heritage clubs. Grandstand access is first-come, first-served; arrive before 7:30am for the best viewing spots.',
     gallery: [
-      'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1200&auto=format&fit=crop'
+      'assets/dune-vista-flag.jpg'
     ]
   }
 ];
@@ -278,35 +278,35 @@ const ADDONS = [
 ];
 
 const HOTELS = [
-  { name: 'Qasr Al Sarab Desert Resort', area: 'Empty Quarter, Al Dhafra', rating: 5, priceFrom: 1450, image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1000&auto=format&fit=crop', description: 'An Arabian-fort-inspired resort set deep in the dunes, with a spa, falconry experiences, and desert-view suites.' },
-  { name: 'Anantara Desert Islands Resort', area: 'Sir Bani Yas Island', rating: 5, priceFrom: 1250, image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1000&auto=format&fit=crop', description: 'A nature-reserve island resort combining wildlife safaris with beachfront and desert-facing rooms.' },
-  { name: 'Liwa Hotel', area: 'Liwa Oasis', rating: 4, priceFrom: 650, image: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1000&auto=format&fit=crop', description: 'A relaxed, family-run hotel overlooking the Liwa Oasis palm groves, closest to the festival gates.' },
-  { name: 'Tilal Liwa Hotel', area: 'Liwa Crescent', rating: 4, priceFrom: 590, image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000&auto=format&fit=crop', description: 'Modern rooms with panoramic dune views along the Liwa Crescent road.' },
-  { name: 'Balloon Land Camp', area: 'Tal Moreeb vicinity', rating: 3, priceFrom: 280, image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1000&auto=format&fit=crop', description: 'Budget-friendly furnished desert tents a short drive from the main festival grounds.' },
-  { name: 'Danat Al Dhafra Resort', area: 'Al Dhafra region', rating: 4, priceFrom: 720, image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop', description: 'A heritage-styled property with a large pool deck and easy access to the Liwa road.' },
-  { name: 'Mezaira Palace Hotel', area: 'Mezaira\' Town', rating: 3, priceFrom: 340, image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop', description: 'A practical town-centre base with easy access to local shops and fuel stations.' },
-  { name: 'Al Dhafra Beach Resort', area: 'Coastal Al Dhafra', rating: 4, priceFrom: 810, image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1000&auto=format&fit=crop', description: 'A coastal alternative roughly 90 minutes from the festival grounds, popular for multi-day itineraries.' }
+  { name: 'Qasr Al Sarab Desert Resort', area: 'Empty Quarter, Al Dhafra', rating: 5, priceFrom: 1450, image: 'assets/resort-pool-real.png', description: 'An Arabian-fort-inspired resort set deep in the dunes, with a spa, falconry experiences, and desert-view suites.' },
+  { name: 'Anantara Desert Islands Resort', area: 'Sir Bani Yas Island', rating: 5, priceFrom: 1250, image: 'assets/village-aerial-day.jpg', description: 'A nature-reserve island resort combining wildlife safaris with beachfront and desert-facing rooms.' },
+  { name: 'Liwa Hotel', area: 'Liwa Oasis', rating: 4, priceFrom: 650, image: 'assets/village-aerial-night.jpg', description: 'A relaxed, family-run hotel overlooking the Liwa Oasis palm groves, closest to the festival gates.' },
+  { name: 'Tilal Liwa Hotel', area: 'Liwa Crescent', rating: 4, priceFrom: 590, image: 'assets/dune-vista-flag.jpg', description: 'Modern rooms with panoramic dune views along the Liwa Crescent road.' },
+  { name: 'Balloon Land Camp', area: 'Tal Moreeb vicinity', rating: 3, priceFrom: 280, image: 'assets/balloon-dusk.jpg', description: 'Budget-friendly furnished desert tents a short drive from the main festival grounds.' },
+  { name: 'Danat Al Dhafra Resort', area: 'Al Dhafra region', rating: 4, priceFrom: 720, image: 'assets/desert-tent-camp-night.png', description: 'A heritage-styled property with a large pool deck and easy access to the Liwa road.' },
+  { name: 'Mezaira Palace Hotel', area: 'Mezaira\' Town', rating: 3, priceFrom: 340, image: 'assets/desert-tent-camp-night.png', description: 'A practical town-centre base with easy access to local shops and fuel stations.' },
+  { name: 'Al Dhafra Beach Resort', area: 'Coastal Al Dhafra', rating: 4, priceFrom: 810, image: 'assets/man-in-desert.png', description: 'A coastal alternative roughly 90 minutes from the festival grounds, popular for multi-day itineraries.' }
 ];
 
 const DINING = [
-  { name: 'Bait Al Dhafra', category: 'Local favourites', rating: 5, image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1000&auto=format&fit=crop', description: 'Slow-cooked machboos and grilled meats served in a traditional majlis-style tent.' },
-  { name: 'Dune Roasters', category: 'Coffee', rating: 4, image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop', description: 'Specialty Arabic coffee, karak, and cardamom-spiced cold brew.' },
-  { name: 'Luqaimat Lane', category: 'Dessert', rating: 5, image: 'https://images.unsplash.com/photo-1541599468348-e96984315921?q=80&w=1000&auto=format&fit=crop', description: 'Fresh luqaimat, kunafa, and date-based sweets made to order.' },
-  { name: 'Oasis Grill & Fine Dining', category: 'Fine dining', rating: 5, image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1000&auto=format&fit=crop', description: 'An elevated tasting menu blending Emirati flavours with modern technique, under-dune seating.' },
-  { name: 'Souq Street Kitchen', category: 'Local favourites', rating: 4, image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop', description: 'A rotating lineup of regional street-food stalls from shawarma to shish tawook.' },
-  { name: 'Sands Espresso Bar', category: 'Coffee', rating: 4, image: 'https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=1000&auto=format&fit=crop', description: 'Third-wave espresso and iced desert lattes with shaded dune-view seating.' }
+  { name: 'Bait Al Dhafra', category: 'Local favourites', rating: 5, image: 'assets/burro-blanco-dine.jpg', description: 'Slow-cooked machboos and grilled meats served in a traditional majlis-style tent.' },
+  { name: 'Dune Roasters', category: 'Coffee', rating: 4, image: 'assets/night-market.jpg', description: 'Specialty Arabic coffee, karak, and cardamom-spiced cold brew.' },
+  { name: 'Luqaimat Lane', category: 'Dessert', rating: 5, image: 'assets/ayala-stick-dance.jpg', description: 'Fresh luqaimat, kunafa, and date-based sweets made to order.' },
+  { name: 'Oasis Grill & Fine Dining', category: 'Fine dining', rating: 5, image: 'assets/burro-blanco-dine.jpg', description: 'An elevated tasting menu blending Emirati flavours with modern technique, under-dune seating.' },
+  { name: 'Souq Street Kitchen', category: 'Local favourites', rating: 4, image: 'assets/night-market.jpg', description: 'A rotating lineup of regional street-food stalls from shawarma to shish tawook.' },
+  { name: 'Sands Espresso Bar', category: 'Coffee', rating: 4, image: 'assets/craft-workshop.jpg', description: 'Third-wave espresso and iced desert lattes with shaded dune-view seating.' }
 ];
 
 const FORTS = [
-  { name: 'Qasr Al Muwaiji', description: 'A restored fort central to the story of Sheikh Zayed\'s early life, featuring an interpretive museum wing.', image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Mezaira\' Fort', description: 'A mudbrick watchtower overlooking the Mezaira\' oasis, historically used to guard caravan routes.', image: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Hadana Fort', description: 'One of the best-preserved Al Dhafra forts, with corner towers offering sweeping dune views.', image: 'https://images.unsplash.com/photo-1600788907416-456578634209?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Qasr Al Sarab Watchtower', description: 'A restored lookout point marking the historic edge of the Empty Quarter trade routes.', image: 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Muzayrah Watchtower', description: 'A defensive tower built to protect the oasis palm groves from raiding parties.', image: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Dhafra Border Fort', description: 'A frontier fortification marking the historic boundary between Abu Dhabi and the interior.', image: 'https://images.unsplash.com/photo-1596276122653-9a4ff28d69c4?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Liwa Crescent Tower', description: 'A hilltop tower along the Liwa Crescent offering some of the region\'s best sunset views.', image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Al Marfa Coastal Fort', description: 'A coastal garrison once used to monitor pearling-fleet movements along the Gulf.', image: 'https://images.unsplash.com/photo-1571847814226-1e00e9d1b0f8?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Al Dhafra Heritage Watchtower', description: 'A reconstructed watchtower now forming the centrepiece of the Heritage Village grounds.', image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop' }
+  { name: 'Qasr Al Muwaiji', description: 'A restored fort central to the story of Sheikh Zayed\'s early life, featuring an interpretive museum wing.', image: 'assets/five-forts-1.jpg' },
+  { name: 'Mezaira\' Fort', description: 'A mudbrick watchtower overlooking the Mezaira\' oasis, historically used to guard caravan routes.', image: 'assets/five-forts-2.jpg' },
+  { name: 'Hadana Fort', description: 'One of the best-preserved Al Dhafra forts, with corner towers offering sweeping dune views.', image: 'assets/five-forts-1.jpg' },
+  { name: 'Qasr Al Sarab Watchtower', description: 'A restored lookout point marking the historic edge of the Empty Quarter trade routes.', image: 'assets/dune-vista-flag.jpg' },
+  { name: 'Muzayrah Watchtower', description: 'A defensive tower built to protect the oasis palm groves from raiding parties.', image: 'assets/five-forts-2.jpg' },
+  { name: 'Dhafra Border Fort', description: 'A frontier fortification marking the historic boundary between Abu Dhabi and the interior.', image: 'assets/gate-4x4.jpg' },
+  { name: 'Liwa Crescent Tower', description: 'A hilltop tower along the Liwa Crescent offering some of the region\'s best sunset views.', image: 'assets/liwa-sign-night.jpg' },
+  { name: 'Al Marfa Coastal Fort', description: 'A coastal garrison once used to monitor pearling-fleet movements along the Gulf.', image: 'assets/man-and-liwa-sign.jpg' },
+  { name: 'Al Dhafra Heritage Watchtower', description: 'A reconstructed watchtower now forming the centrepiece of the Heritage Village grounds.', image: 'assets/helipad-real.jpg' }
 ];
 
 const ITINERARY_THEMES = {
