@@ -836,7 +836,15 @@
     const dots = gsap.utils.toArray('.motion-cinema-dot');
     const progressFill = cinema.querySelector('[data-progress-fill]');
     const counterEl = cinema.querySelector('[data-chapter-current]');
-    const splits = layers.map((layer) => new SplitText(layer.querySelector('.motion-cinema-title'), { type: 'chars' }));
+    // Split into words AND chars, never chars alone. With 'chars' only, every
+    // letter becomes its own inline element and the browser is free to break a
+    // line between any two letters — on a narrow screen the headline came apart
+    // mid-word. Splitting words as well keeps each word in one unbreakable box
+    // while still exposing .chars for the stagger.
+    const splits = layers.map((layer) => new SplitText(layer.querySelector('.motion-cinema-title'), {
+      type: 'chars,words',
+      wordsClass: 'split-word',
+    }));
 
     gsap.set(layers, { opacity: (i) => (i === 0 ? 1 : 0) });
     splits.forEach((split, i) => gsap.set(split.chars, { yPercent: i === 0 ? 0 : 120, opacity: i === 0 ? 1 : 0 }));

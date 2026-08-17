@@ -1560,6 +1560,10 @@ html[dir="rtl"] .card-badges { inset-inline-start: auto; inset-inline-end: 0.75r
 }
 .motion-cinema-title { color: #fff; font-size: clamp(2rem, 4.5vw, 3.4rem); margin-bottom: 0.5rem; }
 .motion-cinema-title .char { display: inline-block; will-change: transform; }
+/* Each split word is one unbreakable box, so a line can only break between
+   words. Without this the per-character spans let the browser break a line in
+   the middle of a word, which read as letters starting a new line. */
+.motion-cinema-title .split-word { display: inline-block; white-space: nowrap; }
 .motion-cinema-desc { color: rgba(255,255,255,0.85); margin-bottom: var(--space-md); max-width: 520px; }
 .motion-cinema-cta { will-change: transform; display: inline-flex; }
 .motion-cinema-dots {
