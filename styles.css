@@ -1435,8 +1435,22 @@ html[dir="rtl"] .card-badges { inset-inline-start: auto; inset-inline-end: 0.75r
   .date-grid { grid-template-columns: repeat(4, 1fr); }
   .eticket { flex-direction: column; text-align: center; }
   .stats-row { grid-template-columns: 1fr 1fr; }
-  .itinerary-fab { padding: 0.7rem 1rem; font-size: 0.85rem; bottom: 1rem; }
+  .itinerary-fab { padding: 0.55rem 0.85rem; font-size: 0.78rem; bottom: 0.85rem; inset-inline-end: 0.85rem; }
+  .itinerary-fab .count-dot { width: 18px; height: 18px; font-size: 0.68rem; }
   .countdown-banner { font-size: 0.9rem; padding: 0.7rem 1.1rem; }
+
+  /* The countdown must stay on ONE row. At 390px the four units wrapped onto a
+     second row, which pushed them down over the marquee band at the foot of the
+     hero — the digits and the moving text sat on top of each other. Letting the
+     units share the row instead of holding an 84px floor keeps them clear. */
+  .countdown { flex-wrap: nowrap; gap: 0.4rem; }
+  .countdown-unit { min-width: 0; flex: 1 1 0; padding: 0.65rem 0.3rem; }
+  .countdown-unit strong { font-size: 1.4rem; }
+  .countdown-unit span { font-size: 0.6rem; letter-spacing: 0.04em; }
+
+  /* The fixed itinerary button sits over the last line of any page. Give the
+     document room to scroll past it. */
+  body { padding-bottom: 3.5rem; }
 
   /* Mobile off-canvas nav */
   .main-nav.mobile-open {
