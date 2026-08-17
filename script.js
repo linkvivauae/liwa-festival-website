@@ -284,7 +284,7 @@ const HOTELS = [
   { name: 'Tilal Liwa Hotel', area: 'Liwa Crescent', rating: 4, priceFrom: 590, image: 'assets/dune-vista-flag.jpg', description: 'Modern rooms with panoramic dune views along the Liwa Crescent road.' },
   { name: 'Balloon Land Camp', area: 'Tal Moreeb vicinity', rating: 3, priceFrom: 280, image: 'assets/balloon-dusk.jpg', description: 'Budget-friendly furnished desert tents a short drive from the main festival grounds.' },
   { name: 'Danat Al Dhafra Resort', area: 'Al Dhafra region', rating: 4, priceFrom: 720, image: 'assets/desert-tent-camp-night.png', description: 'A heritage-styled property with a large pool deck and easy access to the Liwa road.' },
-  { name: 'Mezaira Palace Hotel', area: 'Mezaira\' Town', rating: 3, priceFrom: 340, image: 'assets/desert-tent-camp-night.png', description: 'A practical town-centre base with easy access to local shops and fuel stations.' },
+  { name: 'Mezaira Palace Hotel', area: 'Mezaira\' Town', rating: 3, priceFrom: 340, image: 'assets/liwa-sign-night.jpg', description: 'A practical town-centre base with easy access to local shops and fuel stations.' },
   { name: 'Al Dhafra Beach Resort', area: 'Coastal Al Dhafra', rating: 4, priceFrom: 810, image: 'assets/man-in-desert.png', description: 'A coastal alternative roughly 90 minutes from the festival grounds, popular for multi-day itineraries.' }
 ];
 
