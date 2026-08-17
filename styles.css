@@ -50,8 +50,14 @@
   --gradient-dusk-fade: linear-gradient(180deg, rgba(13, 11, 9, 0) 0%, rgba(13, 11, 9, 0.85) 100%);
 
   /* Typography */
-  --font-latin: 'Manrope', 'Poppins', -apple-system, sans-serif;
-  --font-arabic: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', sans-serif;
+  /* The emoji fallbacks must stay at the end of every family. The UI uses emoji
+     as category icons — chequered flag, falcon, desert, carousel, ferris wheel.
+     Manrope, Poppins and -apple-system carry no emoji glyphs, so without these
+     the browser draws .notdef tofu boxes instead of falling through to the
+     system emoji font. */
+  --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol';
+  --font-latin: 'Manrope', 'Poppins', -apple-system, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol';
+  --font-arabic: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol';
 
   /* Spacing scale */
   --space-xs: 0.5rem;
